@@ -1,8 +1,9 @@
 ﻿using Reservation;
 
-var reservation = new UsernameReservation();
-var repository = new UserRepository();
-var registration = new UserRegistration(reservation, repository);
+var usernameRepository = new UsernameRepository();
+var reservation = new UsernameReservation(usernameRepository);
+var userRepository = new UserRepository();
+var registration = new UserRegistration(reservation, userRepository);
 
 static bool TryGetUsername(out string username)
 {

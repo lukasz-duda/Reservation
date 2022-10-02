@@ -17,12 +17,11 @@ public class UserRegistration
 
         var account = new Account(username);
         repository.Add(account);
-        repository.Save();
 
         if(reservation.Complete(username) == false)
         {
             repository.Remove(account);
-            repository.Save();
+            return false;
         }
 
         return true;
