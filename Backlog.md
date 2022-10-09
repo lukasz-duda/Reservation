@@ -1,4 +1,3 @@
-- NServiceBus
 - Remote Explorer
 - SQL Server
 - RabbitMQ
